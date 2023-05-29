@@ -1,0 +1,34 @@
+/** text-shadow */
+/** box-shadow */
+
+h1 {
+  /* text-shadow: x-axis y-axis blur color */
+  text-shadow: 1px 1px 10px red;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  background: blue;
+  margin: 20px;
+  /* Même principe que text-shadow */
+  /* box-shadow: 3px 5px 5px green; */
+  transition: all 0.5s linear;
+}
+
+/*TODO: "text-shadow generator" sur Google */
+h1 {
+  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+
+/* "box-shadow generator" sur Google */
+/* https://www.cssmatic.com/box-shadow */
+.box:hover {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+/** Browser Prefixes */
+/*  https://caniuse.com/?search=css%20grid */
+/*? Sert dans le cas où une prop a un soucis de compatbilité avec ue version d'un navigateur */
+/* Pas besoin de les ajouter manuellement, il y a un site pour ça : https://autoprefixer.github.io/ */

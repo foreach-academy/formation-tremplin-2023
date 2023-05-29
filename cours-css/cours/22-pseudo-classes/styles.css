@@ -1,0 +1,79 @@
+/** 1 */
+
+/** Pseudo-éléments --- ::first-line ::first-letter */
+
+/* p::first-line {
+  font-weight: bold;
+}
+
+p::first-letter {
+  font-size: 150%;
+} */
+
+/** 2 */
+/** Pseudo-classes */
+/** :hover */
+/* div:hover {
+  color: green;
+}
+
+.header:hover {
+  color: white;
+  background: blue;
+  letter-spacing: 5px;
+}
+
+a:hover {
+  text-decoration: none;
+  font-size: 20px;
+  background: pink;
+}
+ */
+
+/** 3 */
+/** Le lien <a> a des pseudo-classes */
+/** :link - Liens non visités avec href */
+/** :visited - Lien visités */
+/** :hover -  survole */
+/** :active - Quand l'utilisateur clicque */
+/** a - Tous les liens */
+
+/* Tous les liens seront empilés */
+/* a {
+  display: block;
+  background: red;
+  margin: 10px;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: green;
+}
+
+a:active {
+  color: blue;
+} */
+/* Rester appuyer sur le clic pour voir */
+
+/** 4 */
+/** :root - élément racine du document - plus grande spécificité */
+/** élément html */
+/**  variables css*/
+/* On utilise :root pour définr des variables css */
+
+.absolute {
+  font-size: 24px;
+}
+
+.relative {
+  /* relative à la racine */
+  font-size: 1.5rem;
+}
+
+/* On peut utiliser :root pour changer la font-size par défaut du navigateur plutôt que d'aller dans les options comme vu précédemment */
+:root {
+  font-size: 20px;
+}

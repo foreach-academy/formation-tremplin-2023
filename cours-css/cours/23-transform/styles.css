@@ -1,0 +1,88 @@
+/** transform: translate(), skew() */
+
+/* div {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+} */
+
+.one {
+  background: red;
+  /* % est relative à la taille de l'élément */
+  /*  transform: translateX(50%);  */ /* 100px */
+}
+
+.two {
+  background: blue;
+  /* transform: translateY(-60px); */
+}
+
+.three {
+  background: green;
+  /* transform: translateX(100px); */
+  /* transform: translate(250px, 400px); */
+}
+
+/*! cf. example dans index.html */
+* {
+  margin: 0;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero-center {
+  border: 2px solid red;
+  position: absolute;
+  /*? le bord en haut-gauche est centré */
+  top: 50%;
+  left: 50%;
+  /*? là, on centre la div */
+  transform: translate(-50%, -50%);
+}
+
+/** scale() */
+.one {
+  /* transform: scaleX(0.5); */
+  /*? *0.5 donc l'élém est plus petit sur l'axe x */
+}
+
+.two {
+  /* transform: scaleY(0.5); */
+}
+
+.three {
+  /* transform: scale(2, 2); */
+  /* Pareil */
+  /* transform: scale(2); */
+}
+
+/** rotate() */
+.one {
+  /* transform: rotate(20deg); */
+}
+
+.two {
+  /*  380deg = 20deg */
+  /* transform: rotate(380deg); */
+}
+
+.three {
+  /*? On ne voit plus la div car one voit que sa tranche lorsqu'on pivote de 90deg sur l'axe x ou y */
+  /* transform: rotateY(90deg); */
+}
+
+/** skew() */
+.one {
+  transform: skewX(40deg);
+}
+
+.two {
+  transform: skewY(40deg);
+}
+
+.three {
+  transform: skew(40deg, 30deg);
+}

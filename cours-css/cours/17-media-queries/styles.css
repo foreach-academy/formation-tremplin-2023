@@ -1,0 +1,82 @@
+/** Media Queries */
+/** Responsive Design */
+/** Stylise les éléments sur différentes tailles d'écran */
+/** min-width -- commence à */
+/** max-width -- jusqu'à */
+/** Mobile First */
+
+body {
+  background: yellow;
+}
+
+.banner {
+  background: blue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+/** min-width -- commence à */
+/*? Le changement s'opère à partir de 576px */
+/*TODO: Montrer le responsive dans le dev tools */
+@media screen and (min-width: 576px) {
+  body {
+    background: red;
+  }
+
+  .banner {
+    background: yellow;
+  }
+
+  h1 {
+    color: black;
+    /*? Opeut ajouter des props en plus de modifier celles déjà établies */
+    font-size: 60px;
+  }
+}
+/*! Ne pas oublier l'esapce après le "and" et faire attention à la synthaxe */
+/* On peut utiliser plusieurs unités de taille */
+
+/*? On peut avoir plusieurs media queries */
+@media screen and (min-width: 768px) {
+  body {
+    background: green;
+  }
+
+  .banner {
+    background: pink;
+    margin-top: 60px;
+  }
+}
+
+/** max-width -- jusqu'à */
+/* @media screen and (max-width: 576px) {
+  body {
+    background: red;
+  }
+
+  .banner {
+    background: yellow;
+  }
+
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+} */
+
+/*? Cette media à la prio car plus grand max-width */
+/* @media screen and (max-width: 768px) {
+  body {
+    background: green;
+  }
+
+  .banner {
+    background: pink;
+    margin-top: 60px;
+  }
+} */

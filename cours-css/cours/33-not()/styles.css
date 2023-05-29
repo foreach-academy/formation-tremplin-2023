@@ -1,0 +1,8 @@
+/** :not() */
+
+/** La pseudo-classe :not()  représente les éléments qui ne correspondent pas à la liste de sélecteurs. Puisqu'il empêche les items spécifiques d'être sélectionnés */
+
+/*? les élements dans la liste ne seront pas pris en compte */
+.special :not(h1) {
+  color: red;
+}

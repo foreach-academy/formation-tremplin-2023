@@ -1,0 +1,8 @@
+/*** Styles par défaut du navigateur et outils de développeur Chrome ***/
+
+h2 {
+  color: red;
+  font-size: 60px;
+}
+/*  Voir le résultat dans le devtools */
+/* Tester de décocher, changer les propriétés */

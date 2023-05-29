@@ -1,0 +1,16 @@
+.icon {
+  color: red;
+  font-size: 40px;
+}
+
+#first {
+  color: blue;
+}
+
+#second {
+  color: blue;
+}
+
+.container p {
+  color: gray;
+}

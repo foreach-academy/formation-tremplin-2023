@@ -1,0 +1,27 @@
+/** Sélecteurs basiques */
+
+/** Sélecteur universel */
+* {
+  color: red;
+}
+
+/** Sélecteur d'id*/
+/* Il est unique  */
+#heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: blue;
+}
+
+/** Sélecteur de classe*/
+/* Permet de cibler plusieurs élem */
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: green;
+}
+
+/** Sélecteur d'élément */
+p {
+  letter-spacing: 5px;
+}

@@ -1,0 +1,48 @@
+/*! 1 */
+/** display: inline-block */
+/** Ne commence pas une nouvelle ligne mais le navigateur respecte les margin, width, height */
+
+a {
+  font-size: 1.5rem;
+  background: red;
+
+  /*? Seules les marges droite et gauche fonctionnent car <a> est inline */
+  width: 45px;
+  height: 45px;
+  margin: 40px 10px;
+  /*? Le problème c'est que les élements sont sur une nouvelle ligne à chaque */
+  display: block;
+
+  /*? La solution */
+  display: inline-block;
+}
+
+/*! 2 */
+div {
+  background: #f15025;
+  margin: 10px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/** display: none - Supprime du flow (flux) du document, cache l'élément et enlève les espaces */
+.none {
+  display: none;
+}
+
+/** opacity: 0, visibility: hidden - cache l'élément et présever les espaces */
+.opacity-1 {
+  opacity: 1;
+}
+.opacity-5 {
+  opacity: 0.5;
+}
+.opacity-0 {
+  opacity: 0;
+}
+/*? Avec Rgba on contrôle l'opacité de la couleur mais avec la prop opacity, c'est l'opacité de tout l'élément */
+
+.visibility {
+  visibility: hidden;
+}
+/*TODO:  Regarder les divs avec le dev tools pour voir lequelles sont dans le flow du doc */

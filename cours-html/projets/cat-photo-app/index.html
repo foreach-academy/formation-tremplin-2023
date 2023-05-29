@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application photo de chats</title>
+  </head>
+  <body>
+    <main>
+      <h1>Application photo de chats</h1>
+
+      <section>
+        <h2>Photos de chats</h2>
+        <p>
+          Voir plus de
+          <a target="_blank" href="https://freecatphotoapp.com"
+            >photos de chats</a
+          >
+          dans notre galerie.
+        </p>
+        <a href="https://freecatphotoapp.com" target="_blank">
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+            alt="Un joli chat orange couché sur le dos."
+          />
+        </a>
+      </section>
+
+      <section>
+        <h2>Listes de chats</h2>
+        <h3>Ce que les chats adorent :</h3>
+        <ul>
+          <li>L'herbe à chat</li>
+          <li>Les pointeurs laser</li>
+          <li>Les lasagnes</li>
+        </ul>
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+            alt="Une tranche de lasagne sur une assiette."
+          />
+          <figcaption>Les chats <em>adorent</em> les lasagnes</figcaption>
+        </figure>
+        <h3>Top 3 des choses que les chats détestent :</h3>
+        <ol>
+          <li>Le traitement contre les puces</li>
+          <li>Le tonnerre</li>
+          <li>Les autres chats</li>
+        </ol>
+        <figure>
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+            alt="Cinq chats regardant autour d'un champ."
+          />
+          <figcaption>
+            Les chats <strong>détestent</strong> les autres chats.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Formulaire de chat</h2>
+        <form>
+          <fieldset>
+            <legend>
+              Votre chat est-il un chat d'intérieur ou d'extérieur ?
+            </legend>
+            <input
+              id="indoor"
+              type="radio"
+              name="indoor-outdoor"
+              value="indoor"
+              checked
+            />
+            <label for="indoor">Intérieur</label>
+            <input
+              id="outdoor"
+              type="radio"
+              name="indoor-outdoor"
+              value="outdoor"
+            />
+            <label for="outdoor"> Extérieur</label>
+          </fieldset>
+
+          <br />
+
+          <fieldset>
+            <legend>Quelle est la personnalité de votre chat ?</legend>
+            <input
+              id="loving"
+              type="checkbox"
+              name="personality"
+              value="loving"
+            />
+            <label for="loving">Aimant</label>
+            <input id="lazy" type="checkbox" name="personality" value="lazy" />
+            <label for="lazy">Fainéant</label>
+            <input
+              id="energetic"
+              type="checkbox"
+              name="personality"
+              value="energetic"
+            />
+            <label for="energetic">Énergique</label>
+          </fieldset>
+
+          <br />
+
+          <input
+            type="text"
+            name="catphotourl"
+            placeholder="URL de photo de chat"
+            required
+          />
+          <br />
+          <br />
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

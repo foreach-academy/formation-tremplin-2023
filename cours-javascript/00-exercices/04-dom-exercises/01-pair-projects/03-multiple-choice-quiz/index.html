@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire</title>
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Questions à choix multiples</h1>
+    </header>
+    <main>
+      <section class="section">
+        <div class="questions-center">
+          <!-- question -->
+          <div class="question">
+            <h5 class="question-title" data-id="question1">
+              Question 1 : Comment crée-t-on une fonction en JavaScript ?
+            </h5>
+            <div class="question-answers">
+              <button class="btn answer-btn">function = myFunction()</button>
+              <button class="btn answer-btn">function myFunction()</button>
+              <button class="btn answer-btn">create myFunction()</button>
+              <button class="btn answer-btn">function:myFunction()</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+          <!-- end of question -->
+          <!-- question -->
+          <div class="question">
+            <h5 class="question-title" data-id="question2">
+              Question 2 : Quel symbole est utilisé pour les commentaires en
+              ligne en JavaScript ?
+            </h5>
+            <div class="question-answers">
+              <button class="btn answer-btn">//</button>
+              <button class="btn answer-btn">##</button>
+              <button class="btn answer-btn">--</button>
+              <button class="btn answer-btn">**</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+          <!-- end of question -->
+          <!-- question -->
+          <div class="question">
+            <h5 class="question-title" data-id="question3">
+              Question 3 : Quelle méthode est utilisée pour afficher une boîte
+              de dialogue d'alerte en JavaScript ? ?
+            </h5>
+            <div class="question-answers">
+              <button class="btn answer-btn">console.alert()</button>
+              <button class="btn answer-btn">window.alert()</button>
+              <button class="btn answer-btn">document.alert()</button>
+              <button class="btn answer-btn">age.alert()</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+          <!-- end of question -->
+          <!-- question -->
+          <div class="question">
+            <h5 class="question-title" data-id="question4">
+              Question 4 : Comment appelle-t-on une boucle qui s'exécute
+              indéfiniment en JavaScript ?
+            </h5>
+            <div class="question-answers">
+              <button class="btn answer-btn">loop</button>
+              <button class="btn answer-btn">endless loop</button>
+              <button class="btn answer-btn">infinite loop</button>
+              <button class="btn answer-btn">forever loop</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+          <!-- end of question -->
+          <!-- question -->
+          <div class="question">
+            <h5 class="question-title" data-id="question5">
+              Question 5 : Quelle est la syntaxe pour créer un tableau en
+              JavaScript ?
+            </h5>
+            <div class="question-answers">
+              <button class="btn answer-btn">const x = (1,2,3)</button>
+              <button class="btn answer-btn">const x = [1;2;3]</button>
+              <button class="btn answer-btn">const x = 1,2,3</button>
+              <button class="btn answer-btn">const x = [1,2,3]</button>
+            </div>
+            <div class="feedback"></div>
+          </div>
+          <!-- end of question -->
+          <div class="btn-container">
+            <button class="btn submit-btn">Soumettre</button>
+          </div>
+        </div>
+        <!-- modal -->
+        <div class="modal-overlay">
+          <div class="modal-content">
+            <button type="button" class="close-btn" aria-label="bouton fermer">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <p class="modal-text">Score total : <span class="score">0</span></p>
+            <button class="btn reset-btn">Recommencer</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

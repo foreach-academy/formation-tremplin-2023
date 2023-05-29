@@ -1,0 +1,43 @@
+/** line-height - numéro * font-size */
+body {
+  line-height: 1.5;
+}
+/*? On peut aussi utiiser des px */
+
+h1 {
+  font-size: 40px;
+}
+/*  line-height vaut 40 * 1.5 = 60px car elle est relative à la font-size */
+
+/** letter-spacing */
+.one {
+  letter-spacing: 0.5rem;
+}
+
+/** word-spacing */
+.two {
+  word-spacing: 10px;
+}
+
+/** text-decoration */
+a {
+  font-size: 3rem;
+  /* On utilise en général "none" pour les liens */
+  text-decoration: none;
+}
+
+h1 {
+  text-decoration: underline;
+  text-decoration: line-through;
+}
+
+.one {
+  line-height: 2.5;
+  text-decoration: overline;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}

@@ -1,0 +1,61 @@
+/** BLOCK : Le navigateur respecte la largeur/hauteur, marges top/bottom */
+/** INLINE : Le navigateur Ne respecte PAS la largeur/hauteur, marges top/bottom */
+/*! On ne peut pas appliquer les props width/height, margin top/bottom à des éléments INLINE */
+
+/*! 1 */
+/* Changer div en span ainsi que dans le HTML pour la démo */
+div {
+  background: blue;
+  color: white;
+
+  /*? Ces props ne fonctionne pas sur un élément inline (ex: span) */
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+}
+
+/*! 2 */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*** Navbar ***/
+/** list-type: propriétés */
+/** Sélecteurs descendants */
+/*? Sélectionne tous les li descendants de ul */
+ul li {
+  list-style: none;
+}
+
+/* On reset */
+* {
+  margin: 0;
+  padding: 0;
+  /*? On verrra juste après à quoi ça sert */
+  box-sizing: border-box;
+}
+
+ul li a {
+  color: #f15025;
+}
+
+/*TODO: Décommenter le <a> dans HTML pour tester */
+/* ul a {
+  color: green;
+} */
+
+ul li a {
+  text-decoration: none;
+  letter-spacing: 2px;
+  background: #222;
+  /*? Le liens se bavent dessus car se sont des élemnts inline */
+  padding: 5px;
+
+  /*? Les marges ne changent rien car seules les droites et gauches sont pris en compte (voir l.3) */
+  margin: 10px;
+
+  /** La solution  */
+  display: block;
+  margin: 0;
+}

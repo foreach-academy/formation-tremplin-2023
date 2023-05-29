@@ -1,0 +1,41 @@
+/** GROUPING SELECTORS */
+h1,
+h2,
+p {
+  color: green;
+}
+
+/** ID SELECTORS */
+/* Exemple avec h1, h2 et un p entre les deux */
+/*! L'ID doit être unique */
+h1,
+h2,
+p {
+  color: black;
+}
+
+#title {
+  color: green;
+  background-color: black;
+}
+
+#footer {
+  color: red;
+  background-color: grey;
+}
+
+/** CLASS SELECTORS */
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+  background-color: grey;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/*** Aller à styles 3 ***/

@@ -1,0 +1,21 @@
+/** Sélecteur de descendants et d'enfants */
+
+/* Tous les h1 des divs sont en rouge */
+/*? Descendants */
+div h1 {
+  color: red;
+}
+
+/*? Seuls les enfants directes d'une div sont en bleu */
+div > h1 {
+  color: blue;
+}
+
+/*? Prio car plus spécifique */
+.header h1 {
+  color: green;
+}
+
+.header > h1 {
+  color: purple;
+}

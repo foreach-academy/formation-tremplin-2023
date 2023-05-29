@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours HTML || Les balises</title>
+  </head>
+  <body>
+    <a href="./index.html">Retour à l'accueil</a>
+
+    <!--* SUP (exposant) et SUB (indice) -->
+    <h1>Salut, je suis le 1<sup>er</sup> de ma classe <sub>(ou pas)</sub></h1>
+
+    <!--* STRONG (gras) et EM (italique) -->
+    <!-- on peut aussi utiliser les balises <b></b> (gras) et <i></i> (italique) -->
+    <p>
+      Lorem ipsum dolor <strong>sit amet consectetur adipisicing elit</strong>.
+      Incidunt facere eveniet sit pariatur deserunt modi hic eaque earum nulla
+      quo repellat at labore,
+      <em>harum aliquid vero, itaque explicabo in mollitia</em>. Eius ex vitae
+      magni ullam, atque nam debitis omnis totam quia accusantium a soluta
+      doloribus iusto in blanditiis praesentium natus!
+    </p>
+    <!-- C'est mieux d'utiliser le CSS pour le style -->
+    <!-- On utilise ces balises pour l'accessibilité -->
+
+    <!-- È = Alt + 0200 -->
+    <!--* CARACTÈRES SPÉCIAUX AVEC & -->
+    <h1>copyright &copy; &#174;</h1>
+    <!-- Chercher "html special characters codes" sur google puis aller sur le site de la W3S pour en voir d'autres -->
+
+    <!--* LISTE UL (non ordonnée)-->
+    <ul>
+      <li>John</li>
+      <li>Peter</li>
+      <li>Susan</li>
+    </ul>
+
+    <!-- On utilise souvent des listes ul pour faire des barres de navigation (+ css évidemment) -->
+    <!--* NAV -->
+    <ul>
+      <li>
+        <a href="index.html">Accueil</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+    </ul>
+
+    <!--* LISTE OL (ordonnée) -->
+    <ol>
+      <li>John</li>
+      <li>Peter</li>
+      <li>Susan</li>
+    </ol>
+
+    <!--* LISTES IMBRIQUEES -->
+    <ul>
+      <li>Full-stack</li>
+      <li>
+        Front-end
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JS</li>
+        </ol>
+      </li>
+      <li>Back-end</li>
+    </ul>
+
+    <!--* TABLEAU -->
+    <!-- tr = table row (ligne) -->
+    <!-- td = table data (colonne/cellule) -->
+    <!-- th = table heading (en-tête) -->
+
+    <!-- L'atribut "border est obsolète -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>John</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Peter</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Susan</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <br />
+
+    <!--* FORMULAIRE -->
+    <!-- On ne se servira pas des attributs "action" et "method" pour l'instant -->
+    <!-- On verra ça quand on fera du back-end -->
+    <form action="#" method="GET">
+      <!-- l'attr "name" sert à affecter la valeur de l'input à une variable pour qu'on puisse la récupérer lorsqu'on soumet formulaire -->
+      <label for="firstName">Prénom</label>
+      <!-- Text input-->
+      <!-- l'attr "id" sert à lier l'input au label avec l'attr "for" correspondant (quand on clique sur le label,on aura le focus dans l'input)-->
+      <input type="text" name="firstName" id="firstName" />
+      <br />
+      <br />
+
+      <!-- Password input -->
+      <!-- l'attr "placeholder" représente le texte de substitution de l'input -->
+      <label for="password">Mot de passe</label>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Entrer votre mot de passe"
+        autocomplete="off"
+      />
+      <br />
+      <br />
+
+      <!-- Email input -->
+      <!-- l'attr "value" indique la valeur par défaut de l'input -->
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="john@gmail.com" />
+      <br />
+      <br />
+
+      <!-- Textarea-->
+      <label for="description">Description</label>
+      <textarea
+        name="description"
+        id="description"
+        cols="30"
+        rows="5"
+      ></textarea>
+      <br />
+      <br />
+
+      <!-- Radio inputs-->
+      <!-- Permet de sélectionner UNE valeur uniquement -->
+      <p>Choississez votre plat :</p>
+      <input type="radio" name="meal" id="fajita" value="fajita" checked />
+      <label for="fajita">Fajita</label>
+      <input type="radio" name="meal" id="bowl" value="bowl" />
+      <label for="bowl">Bowl</label>
+      <input type="radio" name="meal" id="tacos" value="tacos" />
+      <label for="tacos">Tacos</label>
+      <!-- l'attr "value" est important car c'est cette valeur qu'on soumet -->
+      <!-- le label est à titre indicatif -->
+      <!-- On peut ajouter l'attr "checked" pour en cocher un par défaut -->
+      <!-- ATTENTION : L'attr "name" doit être le même pour chaque radio -->
+      <br />
+      <br />
+
+      <!-- Checkboxes inputs -->
+      <!-- Permet de soumettre plusieurs valeurs -->
+      <p>Suppléments :</p>
+      <input
+        type="checkbox"
+        name="supplements"
+        id="guacamole"
+        value="guacamole"
+      />
+      <label for="guacamole">Guacamole</label>
+      <input type="checkbox" name="supplements" id="chorizo" value="chorizo" />
+      <label for="chorizo">Chorizo</label>
+      <input type="checkbox" name="supplements" id="cheddar" value="cheddar" />
+      <label for="cheddar">Cheddar</label>
+      <br />
+      <br />
+
+      <!--* SELECT INPUT -->
+      <p>Choississez votre viande :</p>
+      <select name="languages">
+        <option value="pork">Porc mexicain</option>
+        <option value="beef">Boeuf</option>
+        <option value="veggie">Végétarien</option>
+      </select>
+      <br />
+      <br />
+
+      <!-- On a besoin d'un input/bouton de type="submit" pour soumettre le formulaire -->
+      <!-- <input type="submit" value="Commander" /> -->
+      <!-- Autre façon avec une balise bouton -->
+      <button type="submit">Commander</button>
+      <!-- TODO: Tester de soumettre avec mauvais email -->
+      <br />
+      <br />
+    </form>
+
+    <!--TODO: soumettre le formulaire et checker l'url pour voir les variables -->
+
+    <!--** Maitenant on connaît assez de HTML pour entrer dans le vif du sujet **-->
+    <!--* Code formating et keyboard shortcuts -->
+    <!--TODO: Installer Prettier-->
+    <!-- Dans settings, chercher "formatter", définir Prettier dans "default formatter" puis cocher "Edit On Paste" et "Edit On Save" -->
+    <!-- Relancer VsCode au cas où -->
+
+    <!--
+      RACCOURCIS QUI GAGNENT DU TEMPS
+
+      CTRL + Z  === Annuler
+      CTRL + C  === Copier
+      CTRL + V  === Coller
+      ALT + Clique === Curseurs multiple
+      CTRL + D === Sélectionner chaque instance
+      CTRL + G === Aller à la ligne ...entrer le numéro
+      CTRL + L === Sélectionner la ligne
+      CTRL + GAUCHE/DROITE === Aller au début/fin du mot
+      CTRL + DEBUT === Aller au début du document
+      CTRL + SHIFT + 1/fin === Aller à la fin du document
+      MAJ + ALT + BAS === Copier/coller la ligne
+      ALT + HAUT/BAS === Bouger la ligne en haut/bas
+      CTRL + / === Commenter/décommenter la ligne
+      CTRL + : === Commenter/décommenter la ou les lignes sélectionnées
+      CTRL + K + S === Liste des raccourcis
+      CTRL + ENTER === Commencer une nouvelle ligne en-dessous
+      CTRL + MAJ + ENTER === Commencer une nouvelle ligne au-dessus
+      ALT + GAUCHE/DROITE === Naviguer
+      MAJ + ALT + flèches GAUCHE/DROITE === Étendre la sélection par bloc vers la gauche ou la droite
+      MAJ + ALT + souris === Sélectionner colonne
+      CTRL + MAJ + ALT + flèches HAUT/BAS === Étendre la sélection vers le haut ou le bas
+      CTRL + F2 === sélectionner toutes les occurences
+      CTRL + MAJ + E === focus l'explorateur (pour naviguer avec les flèches)
+      CTRL + P === Ouverture rapide de fichiers
+      CTRL + TAB === Onglet suivant
+      CTRL + MAJ + TAB === Onglet précédent
+
+      Pour plus de raccourcis : Chercher "printable cheat sheet vscode" sur Google et cliquer sur le 1er lien
+    -->
+
+    <!-- Quelques ressources : MDN (Mozilla developper), W3Schools (facile à lire pour les débutants)-->
+
+    <!--TODO: Chercher HTML Head dans W3S -->
+    <!--TODO: Expliquer <head> element et <meta> element-->
+
+    <!--*** FIN du cours HTML ***-->
+  </body>
+</html>

@@ -1,0 +1,22 @@
+/** object-fit: cover, contain, fill, none, scale-down */
+
+img {
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+
+.one {
+  width: 45%;
+  float: left;
+  margin-right: 5%;
+}
+
+.two {
+  width: 45%;
+  float: left;
+  margin-right: 5%;
+}
+
+/* TODO: Installer Auto Rename Tag et Preview on Web Server */

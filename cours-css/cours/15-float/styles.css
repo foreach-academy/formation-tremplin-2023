@@ -1,0 +1,55 @@
+/*! 1 */
+/* .banner {
+  border: 5px solid red;
+  padding: 10px;
+}
+
+.one {
+  float: left;
+}
+
+.two {
+  float: right;
+  height: 40px;
+}
+
+p {
+  /*  Empêche d'avoir un élément flottant  du côté spécifié */
+/*  clear: both; 
+} */
+
+/*! 2 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  height: 200px;
+  width: 25%;
+  width: 50%;
+  float: left;
+  float: right;
+}
+
+.one {
+  background: red;
+}
+
+.two {
+  background: green;
+}
+
+.three {
+  background: blue;
+}
+
+.four {
+  background: yellow;
+}
+
+/*! 3 */
+h1 {
+  clear: both;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Système de vote</title>
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Système de vote</h1>
+      <div class="title-underline"></div>
+    </header>
+    <main class="main">
+      <section class="section section-candidate">
+        <h2>Liste des candidats</h2>
+        <div class="candidate-list">
+          <!-- candidat -->
+          <article class="candidate">
+            <h3 class="name">Candidat 1</h3>
+            <p class="vote-text"><span class="vote-count">0</span> Votes</p>
+            <button class="btn vote-btn" aria-label="Vote pour Candidat 1">
+              Vote
+            </button>
+          </article>
+          <!-- end of candidat -->
+          <!-- candidat -->
+          <article class="candidate">
+            <h3 class="name">Candidat 2</h3>
+            <p class="vote-text"><span class="vote-count">0</span> Votes</p>
+            <button class="btn vote-btn" aria-label="Vote pour Candidat 2">
+              Vote
+            </button>
+          </article>
+          <!-- end of candidat -->
+          <!-- candidat -->
+          <article class="candidate">
+            <h3 class="name">Candidat 3</h3>
+            <p class="vote-text"><span class="vote-count">0</span> Votes</p>
+            <button class="btn vote-btn" aria-label="Vote pour Candidat 3">
+              Vote
+            </button>
+          </article>
+          <!-- end of candidat -->
+        </div>
+      </section>
+      <button
+        class="btn btn-outline reset"
+        aria-label="Réinitialiser les votes"
+      >
+        Reset
+      </button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cours HTML</title>
+  </head>
+  <body>
+    <!--* Titres -->
+    <h1 id="home">Bonjour, je suis un titre un</h1>
+    <h2>Bonjour, je suis un titre deux</h2>
+    <h3>Bonjour, je suis un titre trois</h3>
+    <h4>Bonjour, je suis un titre quatre</h4>
+    <h5>Bonjour, je suis un titre cinq</h5>
+    <h6>Bonjour, je suis un titre six</h6>
+
+    <!--* Espaces vides -->
+    <h2>Hello &nbsp;&nbsp;&nbsp; World!</h2>
+
+    <!--* Paragraphe -->
+    <!-- On peut faire des paragraphes d'une ligne -->
+    <p>Du texte au pif</p>
+
+    <!-- Lorem Ipsum -->
+    <!-- raccourci emmet - lorem -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+      necessitatibus perspiciatis sint quam, ad maiores vitae exercitationem
+      animi! Corrupti, excepturi corporis eaque incidunt odio vero deserunt
+      quidem laborum facere animi dolorem cumque hic minus, beatae architecto
+      commodi! Est eveniet corporis odit iure ut reiciendis iusto ullam
+      doloremque aliquam! Quae, ea.
+    </p>
+
+    <!--* Attributs -->
+    <!-- Image dans le même dossier -->
+    <!-- TODO: Entregister une image dans le projet -->
+    <h2>Photo de chaton</h2>
+    <!-- On écrit ./nomDuFichier dans l'attribut "src" car il est dans le même dossier que index.html -->
+    <!-- Le chemin commençant par ./ est un chemin relatif -->
+    <!-- ./ signifie que l'image est cherchée à partir du répertoire courant. -->
+    <img src="./kitten.jpg" alt="Photo d'un chaton" width="300" />
+
+    <!-- Image dans un autre dossier-->
+    <!-- TODO: Créer un dossier "images" et entregister une image dedans -->
+    <h2>Photo d'une loutre</h2>
+    <img src="./images/otter.jpg" alt="Photo d'une loutre." width="300" />
+
+    <!-- Lien d'une image en ligne -->
+    <h2>Photo de koala</h2>
+    <img
+      src="https://images.rtl.fr/~c/1200v800/rtl/www/1142919-un-koala-illustration.jpg"
+      alt="Photo d'un koala."
+      width="300"
+    />
+    <!-- 
+      - On peut omettre le "/" à la fin d'une balise auto-fermante mais dans certains cas cela provoquera une erreur (ex: React) 
+      
+      -  Les attributs "width" and "height" servent à définir la taille de l'image mais on référera utiliser un autre façon lorsque l'on verra le CSS. L'unité par défaut est le pixel (px) mais on peut aussi utiliser le pourcentage (%)
+
+      - On peut ne mettre que la largeur car la hauteur s'adapetra automatiquement 
+      
+      - On peut placer les attributs dans l'ordre qu'on veut 
+      
+      - On peut redimensionner l'image avec les attr mais la taille/poids de l'image originelle qui sera chargée par le navigateur sera le même ! Cela peut donc le ralentir le chargement de la page si il y a trop d'images lourdes 
+      
+      - On peut changer la taille/poids en les modifiant via un logiciel (ex: Photoshop)
+    -->
+
+    <!-- Quelques site pour des images libres de droits de haute qualité : unsplash.com, pexels.com,  pixabay.com, gratisography.com -->
+
+    <!--* COMMENTAIRES -->
+    <!-- Peut servir pour délimiter des sections de code ou expliquer une fonction -->
+
+    <!--* Saut de ligne -->
+    <!-- Les sauts de ligne ne sont pas pris en compte dans le code, il donc faut utiliser la balise <br/> ou du CSS -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3>Saut de ligne</h3>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!--* LIENS -->
+    <!-- Externe -->
+    <h2>Liens externe</h2>
+    <a href="https://www.google.fr">Naviguer ici</a>
+    <!-- l'attr target="_blank"  permet d'ouvrir le lien dans un nouvel onglet du navigateur -->
+    <a href="https://www.facebook.com/" target="_blank">Naviguer là</a>
+
+    <!-- Interne -->
+    <h2>Lien interne</h2>
+    <!-- À = alt + 0192 -->
+    <a href="about.html">À propos</a>
+
+    <!-- Dans la même page -->
+    <h2>Dans la même page</h2>
+    <!-- la page remonte (ou descend) là où il y'a un id=home -->
+    <a href="#home">Retour en haut</a>
+
+    <!-- Image en tant que lien -->
+    <h2>Image en tant que lien</h2>
+    <a href="https://vostfree.tv/" target="_blank">
+      <img
+        src="https://pbs.twimg.com/media/EllnFGEXIAERewL.jpg"
+        alt="Photo d'un ousititi pigmée."
+        width="300"
+    /></a>
+
+    <!-- Lien vide -->
+    <h2>Lien vide</h2>
+    <a href="#">Lien vide</a>
+
+    <!--* SUITE DU COURS -->
+    <h2>La suite du cours ici</h2>
+    <a href="elements.html">Voir la suite du cours</a>
+  </body>
+</html>

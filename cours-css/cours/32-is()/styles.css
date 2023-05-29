@@ -1,0 +1,16 @@
+/** :is() */
+
+/** La fonction pseudo-classe :is() prend une liste de sélecteur comme argument, et sélectionne n'importe quel élément qui peut être sélectionner par un des sélecteurs dans cette liste */
+
+/** permet d'écrire moins de code */
+
+/* nav h2:hover,
+header h2:hover,
+section h2:hover {
+  color: red;
+} */
+
+/*? seuls les h2 dans les éléments de la liste seront pris en compte */
+:is(nav, header, section) h2:hover {
+  color: red;
+}

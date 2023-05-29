@@ -1,0 +1,110 @@
+/*? il faut importer les fonts au début du css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&family=Trade+Winds&display=swap');
+
+/** font-size - Taille de la police */
+/** font-family - Décrit la police de l'élément */
+
+/*? VSCode propose des fonts */
+body {
+  font-family: Helvetica;
+}
+
+h1 {
+  font-family: Verdana;
+  font-size: 50px;
+}
+
+/* On utilise quelques fonts dans un projet : une générale et une autre pour les titres par exemples */
+/* En général, on choisit une font sans sérif pour le texte et avec sérif pour les titres */
+
+/** font-stack generic familly */
+/*? Font-stack sert dans le cas où une font n'est pas supportée par le navigateur, alors on utilise une font générique en backup */
+
+/** serif, sans-serif, cursive, fantasy, monospace */
+/* VSCOde propose des fonts similaire du même type jusqu'à une font générique */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/** GOOGLE FONTS pour plein de fonts */
+/*TODO: Aller sur le site et tester */
+/* Ajouter le lien de 2 fonts */
+/* Pour sélectionner des fonts de qualité, filtrer par nombres de styles 10+ et par popularité */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Trade Winds', cursive;
+}
+/* Si on enlève le link on aura quand même la font générique au cas où */
+/*TODO: Commenter link et ajouter les fonts avec import en haut du doc */
+
+/*! 2 */
+/** font-weight  - épaisseur du texte */
+
+.main-heading {
+  font-family: 'Trade Winds', cursive;
+}
+
+.one {
+  /* On ne peut pas choisir un nombre au pif, il faut qu'il soit raccord avec la font importée */
+  font-weight: 900;
+  font-weight: bold;
+}
+
+.two {
+  font-weight: 700;
+  /* On peut aussi utiliser du texte */
+  font-weight: lighter;
+}
+
+/** system fonts - une police qui ets déjà installée sur l'appreil de l'utilisateur  */
+/** - chargements rapides */
+/** - moins de prise de tête */
+/** - le projet sera visuellement différent d'un sytème à l'autre */
+/* c'est une autre approche qui devient populaire */
+
+/** "Sergoe UI" - Utilisée sur les OS Windows */
+/** "Roboto" - police des appareils Android */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/** font-style - défini un style pour le texte */
+.sub-heading {
+  font-style: italic;
+}
+
+.two {
+  font-style: italic;
+  font-style: oblique;
+  font-style: normal;
+}
+
+/** text-align, text-indent */
+body {
+  text-align: right;
+  text-align: center;
+  /* Par défaut à gauche */
+  text-align: left;
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.one {
+  text-align: right;
+}
+
+.two {
+  text-indent: 6rem;
+}

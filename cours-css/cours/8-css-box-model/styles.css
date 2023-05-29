@@ -1,0 +1,128 @@
+/** CSS BOX MODEL */
+/* TODO: chercher une image css box model sur Google */
+h1,
+p {
+  color: #fff;
+}
+
+h1 {
+  background: red;
+}
+
+p {
+  background: blue;
+}
+
+/** PADDING */
+/*? Il ya quatre padding : top, right, bottom, right */
+h1 {
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+}
+
+p {
+  /*? Raccourci pour avoir le même padding autour */
+  /* padding: 40px; */
+
+  /*? 1ère valeur : top & bottom, 2ème valeur : left & right */
+  padding: 30px 60px;
+
+  /*? Raccourci avec 4 valeurs */
+  /* Ordre : top, right, bottom, left */
+  padding: 5px 20px 50px 40px;
+}
+
+/** Pareil avec margin */
+/*? On reset les marges dans un projet pour mieux contrôler la disposition */
+* {
+  /* margin: 0; */
+}
+
+h1 {
+  margin-top: 2rem;
+  margin: 3rem;
+}
+p {
+  /* margin: 20px 40px; */
+  margin: 4rem 4px 50px 10px;
+}
+/*? éléments côte à côte partage une marge en commun  */
+
+/** BORDER */
+h1 {
+  /*? Façon longue */
+  /* border-style: solid;
+  border-width: 10px;
+  border-color: chartreuse; */
+
+  border-bottom: 0.5rem dotted blue;
+  /*? On peut aussi le faire avec la version longue */
+}
+
+p {
+  /*? Raccourci */
+  /*! L'ordre est important */
+  border: 1rem dashed green;
+}
+
+/** BORDER-RADIUS */
+h1 {
+  border-radius: 30px;
+}
+
+p {
+  border-radius: 50%;
+}
+
+/** NEGATIVE MARGIN */
+p {
+  margin-top: -60px;
+}
+
+/*! 2 */
+/** OUTLINE */
+/*TODO: Chercher css outline sur Google */
+/* Enlever tout le css */
+
+.links {
+  margin: 3rem;
+}
+
+a {
+  background: chartreuse;
+  text-decoration: none;
+  padding: 1.2rem 1.5rem;
+  color: #222;
+  text-transform: uppercase;
+  margin: 0 20px;
+}
+
+#one {
+  border: 0.2rem solid #222;
+}
+
+#two {
+  outline-width: 0.2rem;
+  outline-color: #222;
+  outline-style: solid;
+  /*? c'est pareil que border */
+  /** La diffrence se fait avec le offset */
+  outline-offset: -10px;
+}
+
+/*? On peut utiliser border ET outline dans la même règle */
+#one {
+  outline: 0.2rem solid red;
+  outline-offset: -10px;
+}
+
+/*! 3 */
+/*? On utlisera plutôt border mais on il existe outline et on peut faire des trucs sympas avec (cf. tea project) */
+
+/** Border Hack */
+/*? il est pratique d'afficher les bordures de tous les éléments lorsque l'on a un problème de disposition */
+* {
+  border: 2px solid red;
+}

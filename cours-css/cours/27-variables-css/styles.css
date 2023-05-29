@@ -1,0 +1,61 @@
+/** Variables CSS a.k.a Propriétés customisées */
+/** retient une valeur et la réutilise */
+/** --varName: value */
+/** scope */
+/** :root{} === global */
+/** element === local */
+/** N'importe quelle propriété */
+
+/* .heading {
+  color: #f15025;
+}
+
+.text {
+  color: #32ff0e;
+}
+
+.main-text {
+  color: #1313fa;
+}
+
+.second-heading {
+  color: #f15025;
+} */
+
+/*? Mais si je veux changer le orange ? est-ce qu'on va les changer 1 par 1 ? Même si j'ai 5 pages de codes ? */
+/** La solution : variables css */
+
+/* Scope principal : on acccès aux variables partout */
+:root {
+  --primaryColor: #1313fa;
+  --mainTransition: all 0.4s linear;
+  --secondaryColor: #f15025;
+}
+
+.heading {
+  color: var(--primaryColor);
+}
+
+.second-heading {
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+
+.second-heading:hover {
+  color: var(--secondaryColor);
+}
+
+/* Local scope */
+/*  On ne peut accéder à la variable qu'à l'intérieur d'une div */
+div {
+  --primaryRed: red;
+}
+
+.main-text {
+  color: var(--primaryRed);
+}
+
+.third-heading {
+  /*? Ne fonctionne pas (voir dev tools) */
+  color: var(--primaryRed);
+}

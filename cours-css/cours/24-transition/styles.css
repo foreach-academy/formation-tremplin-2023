@@ -1,0 +1,48 @@
+/** transition: change avec le temps */
+/** transition-property: */
+/** transition-duration: */
+
+div {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+div:hover {
+  background: coral;
+}
+
+.one {
+  background: red;
+}
+
+.two {
+  background: blue;
+}
+
+.three {
+  background: green;
+  /* transition-property: background, border-radius;
+  transition-duration: 3s, 0.3s; */
+}
+
+.three:hover {
+  border-radius: 50%;
+}
+
+/** transition-delay */
+/* La transition commence après le délai */
+.three {
+  transition-delay: 0.5s;
+}
+
+/** raccourci */
+.three:hover {
+  transform: scale(1.2);
+}
+
+.three {
+  /* transition: property duration delai, */
+  /* transition: background 2s 1s, border-radius 3s 2s; */
+  transition: all 2s 1s;
+}

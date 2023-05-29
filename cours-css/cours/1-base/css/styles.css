@@ -1,0 +1,27 @@
+h1 {
+  color: green;
+  font-size: 25px;
+}
+
+h2 {
+  color: red;
+  font-size: 50px;
+}
+
+/** COMMENT */
+/*? On peut commenter du code pour débuguer */
+
+/**  STRUCURE D'UNE REGLE CSS */
+/** règle css */
+/* selecteur */
+/* bloc de déclaration (entre les accolades) */
+/* déclaration (propriété + valeur) */
+
+/* TODO: Tester de save en oubliant un ";" et parler de l'erreur */
+/* TODO: Pareil, mais avec un "}"pour montrer que la règle suivante buguera */
+
+/*? On utilise le nom de la balise pour la sélectionner avec le CSS */
+
+/* TODO: Tout effacer dans "index" et "styles" et mettre un h1, h2 et p */
+
+/*** Aller à styles2 ***/

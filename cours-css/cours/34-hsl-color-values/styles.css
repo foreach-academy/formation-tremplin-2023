@@ -1,0 +1,42 @@
+/** HSL - hue, saturation, lightness */
+
+/* TODO: chercher "hsl color wheel" sur Google */
+
+/** hsl(hue, saturation, lightness) */
+
+/** la teinte est un degré sur la roue des couleurs de 0 à 360. 0 est rouge, 120 est vert et 240 est bleu */
+
+/** la saturation est un pourcentage ; 0% est une nuance de gris et 100%  la couleur complète */
+
+/** la luminosité est aussi un pourcentage ; 0% est noir, 100% est blanc */
+
+* {
+  margin: 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 1rem;
+  border: 1px solid orange;
+}
+
+.box-1 {
+  background: hsl(0, 100%, 50%);
+}
+
+.box-2 {
+  background: hsl(120, 100%, 50%);
+}
+
+.box-3 {
+  background: hsl(120, 50%, 50%);
+}
+
+.box-4 {
+  background: hsl(120, 100%, 0%);
+}
+
+.box-5 {
+  background: hsl(120, 100%, 100%);
+}

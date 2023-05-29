@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercices DOM</title>
+    <style>
+      .show-alert {
+        visibility: hidden;
+      }
+    </style>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <h1>Exercices DOM</h1>
+
+    <p id="value"></p>
+
+    <button class="btn">Changer la couleur defond</button>
+
+    <div id="parent">
+      <div class="child">
+        <p>Paragraphe 1</p>
+        <p>Paragraphe 2</p>
+      </div>
+      <div class="child">
+        <p>Paragraphe 3</p>
+      </div>
+    </div>
+
+    <div class="show-alert">Alerte</div>
+    <button class="btn toggle">Afficher/cacher</button>
+
+    <div class="btn-container">
+      <button class="btn-color btn-red">Rouge</button>
+      <button class="btn-color btn-green">Vert</button>
+      <button class="btn-color btn-blue">Bleu</button>
+    </div>
+  </body>
+</html>

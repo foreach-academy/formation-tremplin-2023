@@ -1,0 +1,39 @@
+/*** Last Rule and Specificity * Universal Selector ***/
+
+/*! 2 */
+/*  Spécificité - La prio revient à la règle la plus spécifique */
+/* Voir W3School */
+.special {
+  color: green;
+}
+
+/*! 1 */
+/*? La dernère règle à la prio si il y en a 2 identiques */
+p {
+  color: red;
+}
+
+/*
+  Du code
+*/
+
+p {
+  color: blue;
+}
+/*? En cas de bug, vérifier qu'on a pas ré-écrit une règle */
+
+/*! 3 */
+#heading {
+  color: red;
+}
+
+.heading {
+  color: green;
+}
+/*? ID > class > selector en spécificité  */
+
+/*! 4 */
+/* ? La règle la moins spécifique */
+* {
+  color: purple;
+}

@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  min-height: 100vh;
+  background: url('./beach.jpeg') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-size: 3.75rem;
+  color: red;
+  text-transform: uppercase;
+}
+
+.banner {
+  min-height: 100vh;
+  background: blue;
+}

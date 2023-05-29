@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .container {
+        /* d-flex est un block element -> 100% de large */
+        display: flex;
+        /* d-inline-flex est un inline element -> largement du contenu */
+        /* display: inline-flex; */
+
+        /* flex-direction: row === default */
+        /* flex-direction: row; */
+
+        /* flex-wrap */
+        flex-wrap: wrap;
+
+        /* justify-content */
+        justify-content: center;
+
+        /* align-items */
+        height: 40vh;
+        /* base line est utile pour aligner une nav et un logo par exemple */
+        align-items: center;
+
+        /* align-content */
+        /* align-content: flex-end; */
+      }
+
+      /*   .container-1 {
+        display: flex;
+
+        main axis / cross axis
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      } */
+
+      /* order */
+      .box-1 {
+        order: 2;
+      }
+
+      .box-2 {
+        order: 1;
+      }
+
+      .box-5 {
+        order: -1;
+      }
+
+      /* align self */
+      .box-5 {
+        align-self: flex-end;
+      }
+
+      .box-3 {
+        align-self: stretch;
+      }
+
+      /* flex-grow (0 par défault) */
+      /* .box {
+        flex-grow: 1;
+      } */
+
+      /* .box-1 {
+        flex-grow: 2;
+      }
+
+      .box-2 {
+        flex-grow: 1;
+      } */
+
+      /* flex-shrink (1 par défaut)*/
+      /* .box {
+        width: 500px;
+        flex-grow: 1;
+      }  */
+      /* .box-2 {
+        flex-shrink: 1;
+      } */
+
+      /* flex-basis et raccourcis */
+      /* à revoir */
+      .box {
+        /* max-width */
+        flex-basis: 200px;
+        /* raccourci flex: flex-grow flex-shrink flex-basis */
+        flex: 1 0 200px;
+        flex: 0 0 25%;
+
+        /*? comment avoir des marges entre mes items */
+        /* pour les projets on gardera flex-grow et flex-shrink à 0 car on veut contrôler nous-même le layout avec flex-basis */
+        flex: 0 0 calc(25% - 1rem);
+      }
+
+      .container {
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- parent container -->
+    <div class="container">
+      <!-- children = flex-items -->
+      <div class="box box-1">1</div>
+      <div class="box box-2">2</div>
+      <div class="box box-3">3</div>
+      <div class="box box-4">4</div>
+      <!-- <div class="box box-5">5</div> -->
+      <!--* flex-wrap -->
+      <!--  Si il y a assez d'espace, c'est ok sinon y'a de l'overflow -->
+      <!-- <diG class="box generic">G</diG>
+      <diG class="box generic">G</diG>
+      <diG class="box generic">G</diG>
+      <diG class="box generic">G</diG>
+      <diG class="box generic">G</diG>
+      <diG class="box generic">G</diG>
+      <diG class="box generic">G</diG> -->
+    </div>
+    <!-- main axis / cross axis  -->
+    <!-- <div class="container-1">
+      <div class="box box-1">1</div>
+      <div class="box box-2">2</div>
+      <div class="box box-3">3</div>
+      <div class="box box-4">4</div>
+      <div class="box box-5">5</div>
+    </div> -->
+  </body>
+</html>

@@ -1,0 +1,82 @@
+/*! 1 */
+/** TRANSITION 0 = 100% */
+/** de l'état de début à l'état de fin */
+/** ANIMATION 0 1% 2% ... 100%  */
+/** plusieurs états */
+
+div {
+  width: 200px;
+  height: 100px;
+  color: white;
+  margin: 10px;
+}
+
+/* .transition {
+  background: red;
+  transition: all 2s linear;
+}
+
+.transition:hover {
+  background: yellow;
+  transform: translateX(100px);
+} */
+
+.animation {
+  background: blue;
+  /** version longue */
+  /* animation-name: move;
+  animation-duration: 10s;
+  animation-iteration-count: 2; */
+
+  /** raccourci */
+  /* animation: move 5s infinite; */
+}
+
+/* @keyframes move {
+  0% {
+    transform: translateX(20px);
+  }
+
+  50% {
+    transform: translateX(100px);
+    background: red;
+  }
+
+  75% {
+    transform: translateX(-200px);
+    background: yellow;
+  }
+
+  100% {
+    transform: translateX(20px);
+    background: green;
+  }
+} */
+
+/*! 2 */
+/** animation-fill-mode - permet de persister les changements à la fin de l'animation (100%) */
+.animation {
+  animation: move 5s 2;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    transform: translateX(200px);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translateX(-100px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(20px);
+    opacity: 0.5;
+  }
+}

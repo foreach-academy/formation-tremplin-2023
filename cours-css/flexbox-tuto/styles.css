@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f3f3f3;
+}
+
+.container {
+  border: 5px solid red;
+}
+
+.box {
+  padding: 30px;
+  /* flex-basis */
+  /* on enlève les padding gauche et droite car ça foire le layout */
+  padding: 30px 0;
+  text-align: center;
+  font-size: 35px;
+  color: #f3f3f3;
+}
+
+.box-1 {
+  background: #581f18;
+  /* align-items baseline demo */
+  /* font-size: 65px; */
+}
+
+.box-2 {
+  background: #f0a202;
+}
+
+.box-3 {
+  background: #d95d39;
+}
+.box-4 {
+  background: #202c59;
+}
+.box-5 {
+  background: #51cb20;
+}
+
+/* flex-wrap */
+.generic {
+  background: #202c59;
+}
+
+.container-1 {
+  height: 800px;
+  border: 5px solid blue;
+}
+
+/* 
+==========
+NEW FEATURES
+==========
+*/
+nav {
+  height: 5rem;
+  padding: 0 2rem;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  /* gap: row-gap colmunn-gap */
+  gap: 0 0.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222;
+  font-size: 1.25rem;
+  /* margin-left: 0.5rem; */
+}
+
+h2 {
+  color: #645cff;
+  text-transform: uppercase;
+}
+
+.container-2 {
+  margin: 3rem;
+  border: 5px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+.boxNav {
+  width: 150px;
+  height: 150px;
+}
+
+.box-1 {
+  background: #acbed8;
+}
+
+.box-2 {
+  background: #fed18c;
+}
+
+.box-3 {
+  background: #acbed8;
+}
+
+.box-4 {
+  background: #acbed8;
+}

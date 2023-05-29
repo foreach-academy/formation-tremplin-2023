@@ -1,0 +1,18 @@
+/** Free, easy to get up running, simple syntax */
+
+.fa-home {
+  color: green;
+}
+
+.social-icon {
+  font-size: 4rem;
+  color: blue;
+}
+
+/** self hosting */
+/*? dans la doc -> on website -> host yourself  -> Download the Font Awesome v6 files -> 6.1.0 For The Web */
+/*?  mettre tout le fichier à la racine du projet */
+/*? <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"> */
+/*? mettre ce link avant notre css */
+
+/** on peut aussi copier directement le code SVG */

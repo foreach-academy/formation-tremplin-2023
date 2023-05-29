@@ -1,0 +1,51 @@
+/** z-index --- axe z */
+/** 0 - par défaut */
+/** ne marche pas avec la position: static */
+
+img {
+  width: 150px;
+  height: 150px;
+  /*? Toutes les images seront empilées */
+  position: absolute;
+}
+
+.banner {
+  margin: 20px;
+  width: 80vw;
+  height: 70vh;
+  border: 5px solid green;
+  /*? On veut placer les images par rapport à la bannère */
+  position: relative;
+}
+
+.one {
+  top: 0;
+  left: 0;
+}
+
+.two {
+  top: 10%;
+  left: 10%;
+}
+
+.three {
+  top: 15%;
+  left: 15%;
+}
+
+/*? L'image la plus proche de nous est la dernière */
+/*? En changeant l'ordre dans le html on peut changer son z-index  mais on peut le faire via le css */
+/*  Le z-index peut être positif ou négatif */
+
+.one {
+  z-index: 3;
+}
+
+.two {
+  z-index: 2;
+}
+
+.three {
+  /*? Ne change rien car 0 par défaut et inférieur aux autres z-index */
+  z-index: 1;
+}

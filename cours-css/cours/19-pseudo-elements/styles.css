@@ -1,0 +1,120 @@
+/** Les pseudo-éléments ::before ::after créent and insèrent avant et après le CONTENU (pas les balises)  */
+/** content: '' - requis */
+
+/* Dans le dev tools, on ne voit que le pseudo-élément */
+/* p::before {
+  content: 'Bonjour';
+
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+}
+
+p::after {
+  content: 'après';
+
+  font-weight: bold;
+  font-size: 1rem;
+  color: red;
+} */
+
+/** On peut insérer des blocs */
+/* p::before {
+  display: block;
+  background: #222;
+}
+
+p::after {
+  display: block;
+  background: #222;
+} */
+
+/*! Si on enlève la prop "content"  ça ne fonctionne pas, il faut au moins un content vide -> content: '' */
+
+/* p::after {
+  content: '';
+  width: 100%;
+  height: 3rem;
+} */
+
+/*? À quoi ça peut servir */
+/*! img -- ne fonctionne pas car img est elle-même le contenu. Il faut la mettre dans une div */
+/* 2 */
+img {
+  width: 200px;
+}
+
+div {
+  width: 70vw;
+  /* border: 2px solid red; */
+  margin: 100px auto;
+}
+
+img {
+  /* Pour que l'image remplisse la div il faut utiliser une valeure responsive (ex: %) */
+  width: 100%;
+}
+
+/* Réglons le problème de l'espace qui reste en bas de l'image */
+img {
+  /** La solution (cf: cours sur display) */
+  display: block;
+  /* Si on ajoute un autre élément, on ne se rendra pas compte de l'espace, ce qui peut flinguer la disposition */
+}
+
+/*! Ne marche pas car l'image est elle-même le contenu (voir dans le dev tools) */
+/* img::before {
+  content: 'Bonjour';
+} */
+
+div::before {
+  content: '';
+  border: 2px solid gray;
+
+  /* On a besoin d'utiliser des valeurs responsives */
+  width: 100%;
+  height: 100%;
+  /* ça ne marche toujours pas, on a besoin de la position: absolute */
+  position: absolute;
+  /* Ce n'est pas exactement ce qu'on recherche car la position est relative au body */
+  /* Il faut ajouter un parent avec une position relative */
+}
+
+div {
+  position: relative;
+  /*! Il y a encore des espaces blancs mais cette fois c'est à cause du box-sizing */
+}
+
+div::before,
+div::after {
+  box-sizing: border-box;
+}
+
+div::before {
+  /* On déplace la bordure créée */
+  top: -40px;
+  left: -40px;
+
+  /* On la place derrière l'img */
+  z-index: -2;
+  transition: all 0.3s linear;
+}
+
+div:after {
+  content: '';
+  background: rgba(128, 128, 128, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+
+div:hover::after,
+div:hover::before {
+  top: 0;
+  left: 0;
+}

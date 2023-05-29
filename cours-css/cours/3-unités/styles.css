@@ -1,0 +1,88 @@
+/*! 1 */
+/** PIXELS - valeurs absolues, un point sur l'écran */
+/** FONT-SIZE - taille de la police */
+/** WIDTH - largeur d'un élément */
+/** HEIGHT  - hauteur d'un élément */
+
+h1 {
+  /*? valeur absolue - La taille sera la même, peut importe l'écran (pc, tablette, mobile) */
+  font-size: 60px;
+  background: blue;
+  color: white;
+  /* On change la largeur du h1 */
+  width: 200px;
+  /* On change la hauteur du h1 */
+  height: 400px;
+}
+
+/*! 2 */
+/** POURCENTAGE - unité relative. Dépend du parent */
+/*? On ne voit rien car le parent n'a pas de taille définie */
+.inner {
+  width: 50%;
+  height: 50%;
+  background: red;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+  background: blue;
+}
+
+/*! 3 */
+/** em - RELATIVE, dépend du parent */
+/** 1em - valeur de base (16px) * nombre (1) = 16px */
+/** 2em - valeur de base (16px) * nombre (2) = 32px */
+/** 2em - valeur de base (10px) * nombre (2) = 20px */
+.absolute {
+  font-size: 32px;
+}
+
+.relative {
+  font-size: 2em;
+}
+
+/*? Les 2 font la même taille car la taille par défaut du navigateur est 16px */
+/*? On peut tester de changer la taille de la police du navigateur dans les paramètres pour voir la différence */
+
+div {
+  font-size: 10px;
+}
+/* La font-size de .relative vaut 20px */
+
+/*! 4 */
+/** rem - RELATIVE, dépend de la racine <html> */
+/** 1rem = valeur de base (16px) * nombre (1) = 16px */
+.relative {
+  font-size: 2rem;
+}
+
+/*? On peut changer la valeur de base en changeant la font-size dans la racine */
+html {
+  font-size: 10px;
+}
+
+/*! 5 */
+/** VIEWPORT */
+/** vh - height - pourcentage de l'écran */
+/** vw - width - pourcentage de l'écran */
+/* On reset pour enlever les marges par défaut */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background: green;
+  height: 100vh;
+  width: 100vw;
+}
+/*? Sert pour les bannières */
+
+.about {
+  background: blue;
+  height: 43vh;
+  width: 54vw;
+}

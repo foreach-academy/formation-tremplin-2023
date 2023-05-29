@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combine Selectors</title>
+    <style>
+      /* p {
+        color: red
+      } */
+
+      /* .container {
+        color: green;
+      } */
+
+      /* cible les p descendants de .container */
+      /* cela peut être plus pratique qu'utiliser des classes/ids dans des gros projets pour éviter des de chercher des noms */
+      .container p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>title</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel voluptatum
+        animi nobis fugiat quo eveniet tempora deserunt incidunt facere modi.
+      </p>
+    </div>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, dignissimos.
+      Praesentium quos recusandae repellendus distinctio dolores nam asperiores
+      doloribus. Vitae?
+    </p>
+  </body>
+</html>

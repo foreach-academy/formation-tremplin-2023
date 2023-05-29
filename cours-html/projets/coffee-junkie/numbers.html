@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chiffres</title>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <img
+      src="./images/logo.webp"
+      alt="logo d'un café"
+      width="225"
+      height="225"
+      id="logo"
+    />
+
+    <h1>Chiffres</h1>
+
+    <!-- Navbar-->
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À Propos</a></li>
+      <li><a href="numbers.html">Chiffres</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Banner -->
+    <img
+      src="./images/background.webp"
+      alt="photos de grains de café"
+      width="100%"
+    />
+
+    <h2>Nos Magasins</h2>
+
+    <table style="border: 2px solid black; border-spacing: 25px">
+      <thead>
+        <!--  Cities -->
+        <tr>
+          <th scope="row">Ville</th>
+          <th scope="col">Amiens</th>
+          <th scope="col">Lille</th>
+          <th scope="col">Paris</th>
+        </tr>
+        <!--  End of Cities -->
+      </thead>
+      <tbody>
+        <!-- Orders -->
+        <tr>
+          <th scope="row">Commandes</th>
+          <td>125</td>
+          <td>250</td>
+          <td>500</td>
+        </tr>
+        <!-- End of Orders -->
+        <!-- Profit -->
+        <tr>
+          <th scope="row">Profit</th>
+          <td>10,000&euro;</td>
+          <td>20,000&euro;</td>
+          <td>30,000&euro;</td>
+        </tr>
+        <!-- End of Profit -->
+      </tbody>
+    </table>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>Copyright &copy;<span id="date"></span></p>
+    <a href="#logo">Retour en haut</a>
+  </body>
+</html>

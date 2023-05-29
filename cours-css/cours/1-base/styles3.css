@@ -1,0 +1,32 @@
+/*** DIV and SPAN - Utilisées pour grouper ***/
+
+/** DIV  - Utilisée pour grouper plusieurs élements */
+div {
+  color: red;
+  background-color: black;
+}
+
+/*  Effacer la règle au-dessus (div) */
+.green {
+  color: green;
+  background-color: yellow;
+}
+
+.red {
+  color: red;
+  border-color: black;
+}
+
+/** SPAN - Utilisée pour grouper du contenu inline */
+span {
+  text-transform: uppercase;
+}
+
+.text {
+  color: blue;
+  background-color: white;
+}
+
+/*? On se sert beaucoup des DIVs */
+
+/*** Aller à styles 4 ***/

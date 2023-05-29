@@ -1,0 +1,49 @@
+/** Les élément peuvent avoir ces propriétés par défaut : */
+/** BLOCK : Commence toujours sur une nouvelle ligne et prend toute la largeur */
+/** INLINE : Ne commence pas sur une nouvelle ligne et prend seulement la taille du contenu */
+
+.block {
+  background: blue;
+  color: white;
+
+  /*? Les éléments ne commencent pas sur une nouvelle ligne et ne prennent que la taille du contenu  */
+  display: inline;
+}
+
+.inline {
+  background: red;
+  color: white;
+
+  /*? Ne change rien car les éléments ont cette prop par défaut */
+  display: inline;
+  /*? Maintenant ils commencent sur une nouvelle ligne et prennent toute la largeur*/
+  display: block;
+}
+
+/*? On voit que les blocks prennent toute la largeur alors que les inline ne font que la largeur du contenu */
+
+/*! 2 */
+/** HORIZONTAL CENTERING */
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+body {
+  /*? Centre un élement inline */
+  text-align: center;
+}
+
+.block {
+  /*? Pour centrer un élément block, il faut lui donner une largeur d'abord */
+  width: 300px;
+  /*? Centre le block */
+  margin: 2rem auto;
+
+  /* Version longue */
+  margin-left: auto;
+  margin-right: auto;
+}

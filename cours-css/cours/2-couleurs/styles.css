@@ -1,0 +1,79 @@
+/*** Propriétés des couleurs ***/
+
+/** COLOR - BACKGROUND-COLOR - BACKGROUND */
+/*? Quand on tape le nom d'une couleur, on peut voir son code hexadécimal dans les suggestions de VSCode */
+
+#first {
+  /*? CTRL + SPACE - liste des suggestions */
+  color: white;
+  background-color: black;
+}
+
+#second {
+  color: red;
+  /*? Un raccourci pour background-color */
+  background: yellow;
+}
+
+/*? On peut voir la liste des noms de couleurs sur W3Schools en cherchant sur Google "css color names" */
+
+/** RBG - Red, Green, Blue 0-255 */
+#third {
+  color: rgb(255, 0, 0);
+  background: rgb(0, 0, 0);
+}
+
+#four {
+  color: rgb(0, 255, 0);
+  /*? La couleur par défaut du body est white  donc on ne verra pas la diff' */
+  background: rgb(255, 255, 255);
+}
+
+body {
+  background: rgb(150, 134, 210);
+}
+
+#five {
+  color: rgba(0, 0, 255);
+  background: rgb(200, 90, 233);
+}
+
+/** RGBA A - opacité/transparence  0-1 */
+/*? Pareil que rgb(255, 0, 0) */
+#six {
+  color: rgba(255, 0, 0, 1);
+}
+
+/*? alpha à 0 - On ne voit plus  */
+#seven {
+  /* color: rgba(255, 0, 0, 0); */
+  color: rgba(0, 255, 0, 0.53);
+  background: rgba(0, 0, 0, 1);
+}
+
+/** HEX VALUES  - #RRGGBB */
+/** 0123456789 A(10) B(11) C(12) D(13) E(14) F(15) */
+/** #FF0000 - Red */
+/** #00FF00 - Green */
+/*? Même principe que RGB */
+#eight {
+  color: #ff0000;
+  /*? Si je répète les mêmes valeurs, je n'ai besoin de l'écrire que 3 fois */
+  background: #000;
+
+  /* Couleur blanche */
+  /* color: #fff; */
+}
+
+#nine {
+  color: #0000fffb;
+  background-color: #f15025;
+}
+
+/** Options de couleur de VSCode */
+/*? En passant le curseur sur la couleur on accès à l'outil de VSCode qui permet de changer le format, la nuance, l'opacité ou la couleur */
+
+/*? C'est compliqué de trouver des couleurs qui vont ensemble */
+/*? Il y le site coolors.co qui donne des couleurs qui se marient */
+/* Onglet "generate" et appuyer sur espace  pour changer les couleurs */
+/*On peut lock une couleur en cliquant sur le cadena */

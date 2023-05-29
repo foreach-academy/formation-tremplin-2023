@@ -1,0 +1,55 @@
+/*! 1 */
+/** CALC() */
+/** PERFORME DES OPERATIONS MATHEMATIQUES + - * / */
+/** MIX AND MATCH VALUES */
+
+* {
+  margin: 0;
+}
+
+.navbar {
+  background-color: blue;
+  height: 100px;
+  color: white;
+  font-size: 3rem;
+}
+
+.banner {
+  background: red;
+  /* height: 100vh; */
+  /*? Problème : on doit scroller pour voir la bannière en entier */
+  /* height: calc(100vh - 100px); */
+  /*! Mettre un espace après "-" */
+}
+
+/*! 2 */
+/** height: auto; overflow */
+.example {
+  background: green;
+  width: 20rem;
+  height: 25rem;
+  /*? Si on met du texte sans préciser la largeur et la hauteur, la taille s'adapte au texte */
+  /*? On dit que la hauteur est automatique */
+
+  width: 10rem;
+  height: 10rem;
+  /*? Si la hauteur n'est pas assez grande pour le texte alors il dépassera de la div */
+
+  /*? On peut gérer ce dépassement avec la prop overflow */
+  overflow: hidden;
+  overflow: scroll;
+}
+
+/** min-height; max-height; */
+/*? Le contenu peut aussi dépasser de la bannière */
+/*? Dans ce cas, on peut utiliser min-height */
+.banner {
+  /* Penser à commenter height avant */
+  /*? C'est la hauteur minimum, donc elle peut être plus grande */
+  min-height: calc(100vh - 100px);
+
+  max-height: 90vh;
+  /*? On peut fixer une hauteur max mais on pourrait rencontrer le même problème qu'avec height en cas de surplus de contenu */
+  /* MOn utilise la même solution : overflow */
+  overflow: scroll;
+}
