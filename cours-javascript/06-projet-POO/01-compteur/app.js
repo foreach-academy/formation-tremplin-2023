@@ -6,10 +6,9 @@ class Counter {
     // valeur
     // élément pour afficher la valeur dans le DOM
     // 3 boutons
+    // binder les 3 fonctions à "this"
     // faire les event listeners sur les boutons
   }
-
-  // binder les 3 fonctions à "this"
 
   // incrémenter
   // décrémenter
