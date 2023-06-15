@@ -1,22 +1,22 @@
-const colors = ['green', 'red', 'rgba(133, 122, 200)', '#f15025'];
+const colors = ['green', 'red', 'rgba(133,122,200)', '#f15025'];
 
-const btn = document.querySelector('.btn');
+const btn = document.getElementById('btn');
 const color = document.querySelector('.color');
-let previousColor = null;
+let previousIndex = null;
 
 btn.addEventListener('click', function () {
-  let newColor = null;
+  let newIndex = null;
 
   do {
-    newColor = getRandomColor();
-  } while (newColor === previousColor);
+    newIndex = getRandomNumber();
+  } while (newIndex === previousIndex);
 
-  previousColor = newColor;
+  previousIndex = newIndex;
 
-  document.body.style.backgroundColor = newColor;
-  color.textContent = newColor;
+  document.body.style.backgroundColor = colors[newIndex];
+  color.textContent = colors[newIndex];
 });
 
-function getRandomColor() {
-  return colors[Math.floor(Math.random() * colors.length)];
+function getRandomNumber() {
+  return Math.floor(Math.random() * colors.length);
 }

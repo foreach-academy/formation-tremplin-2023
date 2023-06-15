@@ -1,3 +1,4 @@
+// local reviews data
 const reviews = [
   {
     id: 1,
@@ -29,23 +30,60 @@ const reviews = [
   }
 ];
 
-const nameP = document.querySelector('.name');
-const btn = document.querySelector('.btn');
-const img = document.querySelector('img');
-let index = 0;
+const img = document.querySelector('#person-img');
+const author = document.querySelector('#author');
+const job = document.querySelector('#job');
+const info = document.querySelector('#info');
+const btns = document.querySelectorAll('button');
+// set current item
+let currentItem = 0;
 
-function afficherInfos(review) {
-  nameP.textContent = `Bonjour ${review.name}`;
-  img.setAttribute('src', review.img);
-  img.src = review.img;
-  img.alt = review.name;
+// show person based on item
+function showPerson(person) {
+  const item = reviews[person];
+
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
 }
 
-nameP.textContent = `Bonjour ${reviews[index].name}`;
-img.src = reviews[index].img;
-img.alt = reviews[index].name;
+// load initial item
+window.addEventListener('DOMContentLoaded', function () {
+  showPerson(currentItem);
+});
 
-btn.addEventListener('click', function () {
-  index++;
-  afficherInfos(reviews[index]);
+btns.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    const target = e.currentTarget;
+    const oldItem = currentItem;
+
+    // next item
+    if (target.classList.contains('next-btn')) {
+      currentItem++;
+
+      if (currentItem >= reviews.length) {
+        currentItem = 0;
+      }
+    }
+
+    // previous item
+    if (target.classList.contains('prev-btn')) {
+      currentItem--;
+
+      if (currentItem < 0) {
+        currentItem = reviews.length - 1;
+      }
+    }
+
+    // random item
+    if (target.classList.contains('random-btn')) {
+      while (oldItem === currentItem) {
+        currentItem = Math.floor(Math.random() * reviews.length);
+      }
+    }
+
+    // show person
+    showPerson(currentItem);
+  });
 });
