@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <img
+      src="./images/logo.webp"
+      alt="logo d'un café"
+      width="225"
+      height="225"
+      id="logo"
+    />
+
+    <h1>Contact</h1>
+
+    <!-- Navbar-->
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À Propos</a></li>
+      <li><a href="numbers.html">Chiffres</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- Banner -->
+    <img
+      src="./images/background.webp"
+      alt="photos de grains de café"
+      width="100%"
+    />
+
+    <h2>Nous contacter</h2>
+
+    <form action="#">
+      <!-- Name -->
+      <label for="name">Nom :</label>
+      <input type="text" name="name" id="name" placeholder="John" />
+      <br />
+      <br />
+
+      <!-- Email -->
+      <label for="email">Email :</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="john.doe@gmail.com"
+      />
+      <br />
+      <br />
+
+      <!-- Message -->
+      <label for="description">Message :</label>
+      <br />
+      <textarea
+        name="description"
+        cols="30"
+        rows="10"
+        id="description"
+        placeholder="Votre message"
+      ></textarea>
+      <br />
+      <br />
+
+      <!-- Submit -->
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>Copyright &copy;<span id="date"></span></p>
+    <a href="#logo">Retour en haut</a>
+  </body>
+</html>

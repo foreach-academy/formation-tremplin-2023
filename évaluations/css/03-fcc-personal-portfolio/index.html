@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de John DOE</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize css -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- js -->
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <body>
+      <!-- nav -->
+      <nav id="navbar">
+        <div class="nav-center">
+          <ul class="nav-links">
+            <li><a class="nav-link" href="#welcome-section">À propos</a></li>
+            <li><a class="nav-link" href="#projects">Projets</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- welcome -->
+      <section id="welcome-section">
+        <div>
+          <h1>Salut, moi c'est John Doe</h1>
+          <p>dévelopeur web & web mobile</p>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section class="section" id="projects">
+        <!-- title -->
+        <div class="section-title">
+          <h2>Mes projets</h2>
+        </div>
+        <!-- projects center -->
+        <div class="section-center grid">
+          <!-- card -->
+          <a
+            href="https://dwwm-tribute-page.netlify.app/"
+            target="_blank"
+            class="project-tile"
+          >
+            <img src="./images//tribute-page.png" class="project-img" />
+            <p class="project-title">Page d'hommage</p>
+          </a>
+          <!-- end of card -->
+          <!-- card -->
+          <a
+            href="https://grid-mini-projects-css.netlify.app/"
+            target="_blank"
+            class="project-tile"
+          >
+            <img src="./images//grid-mini-projects.png" class="project-img" />
+            <p class="project-title">Mini projets grid</p>
+          </a>
+          <!-- end of card -->
+        </div>
+        <a href="#" target="_blank" class="btn"
+          >Voir tout <span><i class="fas fa-chevron-right"></i></span
+        ></a>
+      </section>
+
+      <section class="section" id="contact">
+        <div>
+          <h2>Travaillons ensemble...</h2>
+          <p>Comment prenez-vous votre café ?</p>
+        </div>
+        <ul class="social-links">
+          <li>
+            <a href="https://github.com" id="profile-link" target="_blank"
+              ><span><i class="fab fa-github"></i></span> GitHub</a
+            >
+          </li>
+          <li>
+            <a href="https://linkedin.com" id="profile-link" target="_blank"
+              ><span><i class="fab fa-linkedin"></i></span> Linkedin</a
+            >
+          </li>
+        </ul>
+      </section>
+    </body>
+  </body>
+</html>
