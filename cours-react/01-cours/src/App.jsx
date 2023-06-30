@@ -1,7 +1,9 @@
+import Starter from './tutoriel/01-useState/4-useState-compteur.jsx';
+
 const App = () => {
   return (
     <div className='container'>
-      <h1>Cours React</h1>
+      <Starter />
     </div>
   );
 };
