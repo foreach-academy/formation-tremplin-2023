@@ -1,4 +1,4 @@
-import Starter from './tutoriel/02-useEffect/3-useEffect-fetch-data.jsx';
+import Starter from './tutoriel/03-rendu-conditionnel/2-aperçu-short-circuit.jsx';
 
 const App = () => {
   return (
