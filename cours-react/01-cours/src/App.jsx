@@ -1,4 +1,4 @@
-import Starter from './tutoriel/01-useState/4-useState-compteur.jsx';
+import Starter from './tutoriel/02-useEffect/3-useEffect-fetch-data.jsx';
 
 const App = () => {
   return (
