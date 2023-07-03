@@ -1,4 +1,4 @@
-import Starter from './tutoriel/03-rendu-conditionnel/2-aperçu-short-circuit.jsx';
+import Starter from './tutoriel/03-rendu-conditionnel/3-example-short-circuit.jsx';
 
 const App = () => {
   return (
