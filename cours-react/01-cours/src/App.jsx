@@ -1,4 +1,4 @@
-import Starter from './tutoriel/04-formulaires/2-user-challenge.jsx';
+import Starter from './tutoriel/04-formulaires/4-autres-inputs.jsx';
 
 const App = () => {
   return (
