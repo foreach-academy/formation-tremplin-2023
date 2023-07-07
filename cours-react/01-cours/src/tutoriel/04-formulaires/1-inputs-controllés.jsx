@@ -1,6 +1,17 @@
+import { useState } from 'react';
+
 const ControlledInputs = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // faire quelque chose
+    console.log(name, email);
+  };
+
   return (
-    <form className='form'>
+    <form className='form' onSubmit={handleSubmit}>
       <h4>Inputs controllés</h4>
 
       {/* nom */}
@@ -8,7 +19,14 @@ const ControlledInputs = () => {
         <label htmlFor='name' className='form-label'>
           Nom
         </label>
-        <input type='text' name='name' id='name' className='form-input' />
+        <input
+          type='text'
+          name='name'
+          id='name'
+          className='form-input'
+          value={name}
+          onChange={(e) => setName(e.currentTarget.value)}
+        />
       </div>
 
       {/* email */}
@@ -16,7 +34,14 @@ const ControlledInputs = () => {
         <label htmlFor='email' className='form-label'>
           Email
         </label>
-        <input type='text' name='email' id='email' className='form-input' />
+        <input
+          type='email'
+          name='email'
+          id='email'
+          className='form-input'
+          value={email}
+          onChange={(e) => setEmail(e.currentTarget.value)}
+        />
       </div>
 
       <button type='submit' className='btn btn-block'>
