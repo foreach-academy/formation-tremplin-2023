@@ -1,4 +1,4 @@
-import Starter from './tutoriel/03-rendu-conditionnel/5-user-challenge.jsx';
+import Starter from './tutoriel/04-formulaires/1-inputs-controllés.jsx';
 
 const App = () => {
   return (
