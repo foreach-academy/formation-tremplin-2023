@@ -1,4 +1,4 @@
-import Starter from './tutoriel/04-formulaires/1-inputs-controllés.jsx';
+import Starter from './tutoriel/04-formulaires/2-user-challenge.jsx';
 
 const App = () => {
   return (
