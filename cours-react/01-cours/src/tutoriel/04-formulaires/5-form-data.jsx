@@ -4,7 +4,7 @@ const UnctrolledInputs = () => {
     //* il est important que les inputs aient un attr "name" pour utiliser l'API Form Data
     const formData = new FormData(e.currentTarget);
     const newUser = Object.fromEntries(formData);
-    //  faire quelque chose
+    // faire quelque chose
     console.log(newUser);
     // reset la valeur des inputs
     e.currentTarget.reset();
