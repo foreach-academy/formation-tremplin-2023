@@ -5,6 +5,14 @@ const SingleProduct = () => {
   const { productId } = useParams();
   const product = products.find((product) => product.id === productId);
 
+  if (!product) {
+    return (
+      <section className='section'>
+        <p>Produit introuvable</p>
+      </section>
+    );
+  }
+
   const { image, name } = product;
 
   return (
