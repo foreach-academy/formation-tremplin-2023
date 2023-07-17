@@ -1,6 +1,6 @@
 import Loading from '../components/Loading.jsx';
 
-const url = 'www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
+const url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
 
 const SingleCocktail = () => {
   // state - cocktail

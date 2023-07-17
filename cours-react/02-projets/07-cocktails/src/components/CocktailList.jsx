@@ -1,13 +1,29 @@
-import Cocktail from './Cocktail';
+import CocktailCard from './CocktailCard';
 import Loading from './Loading';
 
 const CocktailList = ({ cocktails, isLoading }) => {
-  //? vérifier si  isLoading vrai ?
+  if (isLoading) {
+    return <Loading />;
+  }
 
-  //? vérifier si cocktails existe ?
+  if (!cocktails) {
+    return (
+      <h2 className='section-title'>
+        no cocktails matched your search criteria
+      </h2>
+    );
+  }
 
-  // afficher les cocktails - C'est une liste de <Cocktail />
-  return <div>CocktailList</div>;
+  return (
+    <section className='section'>
+      <h2 className='section-title'>Cocktails</h2>
+      <div className='cocktails-center'>
+        {cocktails.map((cocktail) => (
+          <CocktailCard key={cocktail.idDrink} {...cocktail} />
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default CocktailList;
