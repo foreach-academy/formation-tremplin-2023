@@ -19,7 +19,7 @@ const CocktailList = ({ cocktails, isLoading }) => {
       <h2 className='section-title'>Cocktails</h2>
       <div className='cocktails-center'>
         {cocktails.map((cocktail) => (
-          <CocktailCard key={cocktail.idDrink} {...cocktail} />
+          <CocktailCard key={cocktail.id} {...cocktail} />
         ))}
       </div>
     </section>

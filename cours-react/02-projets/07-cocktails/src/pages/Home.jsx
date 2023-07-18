@@ -51,7 +51,7 @@ const Home = () => {
 
   return (
     <main>
-      <SearchForm />
+      <SearchForm searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <CocktailList cocktails={cocktails} isLoading={isLoading} />
     </main>
   );
