@@ -13,7 +13,7 @@ const mainRouter = require('./routes/mainRoutes.js');
 app.use(express.static('./public'));
 app.use(express.json());
 
-app.use(mainRouter);
+app.use('/api/v1', mainRouter);
 
 app.use(notFound);
 app.use(errorHandler);
