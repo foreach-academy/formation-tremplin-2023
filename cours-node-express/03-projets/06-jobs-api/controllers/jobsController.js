@@ -1,5 +1,6 @@
 // crée un job
 const createJob = async (req, res) => {
+  console.log(req.user);
   res.send('create job');
 };
 

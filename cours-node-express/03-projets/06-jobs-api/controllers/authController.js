@@ -1,4 +1,4 @@
-const { BadRequestError } = require('../errors');
+const { BadRequestError, UnauthenticatedError } = require('../errors');
 const bcrypt = require('bcryptjs');
 const db = require('../db');
 const jwt = require('jsonwebtoken');
@@ -53,21 +53,35 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  // récupère le body de la requête
+  const { email, password } = req.body;
 
-  // valider les inputs
+  if (!email || !password) {
+    throw new BadRequestError('Veuillez remplir tous les champs');
+  }
 
-  // récupère l'utlisateur dans la BDD grâce son email
+  const {
+    rows: [user]
+  } = await db.query('SELECT * FROM users WHERe email = $1', [email]);
 
-  // si pas d'user -> jeter erreur
+  if (!user) {
+    throw new UnauthenticatedError('Authentification invalide');
+  }
 
-  // comparer les mot de passe
-  // Si false -> jeter erreur
+  const isPasswordCorrect = await bcrypt.compare(password, user.password);
 
-  // génère le token
+  if (!isPasswordCorrect) {
+    throw new UnauthenticatedError('Authentification invalide');
+  }
 
-  // envoyer le token dans la réponse
-  res.send('login');
+  const token = jwt.sign(
+    { userID: user.user_id, name: user.name },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: process.env.JWT_LIFETIME
+    }
+  );
+
+  res.status(StatusCodes.OK).json({ user: { name: user.name }, token });
 };
 
 module.exports = { register, login };
