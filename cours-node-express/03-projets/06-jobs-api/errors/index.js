@@ -7,7 +7,7 @@ class BadRequestError extends Error {
   }
 }
 
-class NotFoundError extends Exrror {
+class NotFoundError extends Error {
   constructor(message) {
     super(message);
     this.statusCode = StatusCodes.NOT_FOUND;
