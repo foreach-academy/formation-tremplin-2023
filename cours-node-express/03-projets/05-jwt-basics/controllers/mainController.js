@@ -1,6 +1,6 @@
-const { BadRequestError, UnauthenticatedError } = require('../errors');
-const jwt = require('jsonwebtoken');
+const { BadRequestError } = require('../errors');
 const { StatusCodes } = require('http-status-codes');
+const jwt = require('jsonwebtoken');
 
 const login = async (req, res) => {
   const { username, password } = req.body;
@@ -23,13 +23,10 @@ const login = async (req, res) => {
 };
 
 const dashboard = async (req, res) => {
-  const authHeader = req.headers.authorization;
-
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
-    throw new UnauthenticatedError('Pas de token fournit');
-  }
-
-  res.send('dashboard');
+  res.status(StatusCodes.OK).json({
+    msg: `Salut ${req.user?.username} !`,
+    secret: 'Voici vos données autorisées.'
+  });
 };
 
 module.exports = { login, dashboard };
