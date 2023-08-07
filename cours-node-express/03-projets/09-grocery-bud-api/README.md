@@ -1,9 +1,11 @@
-# Grocery Bud API
+# Grocery Bud
 
-## Base de données
+## Back-end
+
+### Base de données
 
 - Créer la BDD
-- Créer un ENUM pour le rôle utilisateur
+- Créer un ENUM pour le rôle utilisateur :
 
 ```sql
 CREATE TYPE user_role AS ENUM ('admin', 'user');
@@ -12,11 +14,11 @@ CREATE TYPE user_role AS ENUM ('admin', 'user');
 - Créer les tables : users, items
 
 ```sql
--- Dans la table users, ajouter le rôle
+-- colonne role dans la table users
 role user_role NOT NULL DEFAULT 'user'
 ```
 
-## SETUP
+### Setup le serveur
 
 - Initialiser package.json
 - Installer les librairies : express, pg, dotenv, express-async-errors, http-status-codes, jsonwebtoken, bcryptjs, helmet, express-rate-limit
@@ -32,20 +34,20 @@ role user_role NOT NULL DEFAULT 'user'
 
 - Errors: BadRequestError, UnauthenticatedError, NotFoundError
 
-### Controllers
+#### Controllers
 
 - authController : register, login
 
-### Routes :
+#### Routes :
 
 - authRoutes /api/v1/auth
 
-### Thunder Client
+### Thunder Client/Postman
 
-- Créer une collection "Grocery Bud" dans Thunder Client
+- Créer une collection "Grocery Bud" dans Thunder Client/Postman
   - Créer un dossier Auth
 
-## Inscription de l'utilisateur
+### Inscription de l'utilisateur
 
 - Récupérer les inputs envoyées
 - "Valider" les inputs
@@ -56,7 +58,7 @@ role user_role NOT NULL DEFAULT 'user'
 - Créer un token avec JWT
 - Envoyer le token dans la réponse
 
-## Connexion de l'utilisateur
+### Connexion de l'utilisateur
 
 - Récupérer les inputs envoyées
 - "Valider" les inputs
@@ -64,3 +66,26 @@ role user_role NOT NULL DEFAULT 'user'
 - Comparer les mots passes avec bcryptjs
 - Créer un token avec JWT
 - Envoyer le token dans la réponse
+
+### Middleware authenticateUser
+
+- Faire un middleware authenticateUser qui authentifie l'utilisateur (en utilisant JWT) et attache le token décodé à `req.user`
+
+### Contrôleurs et routes pour les articles
+
+- Faire les routes et les contrôleurs pour items :
+
+  - createItem
+  - getAllItems
+  - getItem
+  - updateItem
+  - deleteItem
+
+- Appeler authenticateUser avant les routes pour les protéger
+
+## Front-end
+
+- Initialiser un projet React ou copier/coler 05-grocery-bud
+- Créer des "pages" `DashboardLayout.jsx`,`Login.jsx`, `Register.jsx` et `ErrorPage.jsx`
+- Créer un composant `Navbar.jsx`
+- Setup react-router
