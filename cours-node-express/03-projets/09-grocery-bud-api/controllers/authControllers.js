@@ -7,18 +7,6 @@ const { hashPassword, comparePassword } = require('../utils/passwordUtils.js');
 const register = async (req, res) => {
   const { name, email, password } = req.body;
 
-  if (!name || !password || !email) {
-    throw new BadRequestError('Veuillez remplir tous les champs');
-  }
-
-  const {
-    rows: [userEmail]
-  } = await db.query('SELECT * FROM users WHERE email = $1', [email]);
-
-  if (userEmail) {
-    throw new BadRequestError("L'email existe déjà");
-  }
-
   const {
     rows: [{ count }]
   } = await db.query('SELECT COUNT(*) FROM users');
@@ -47,10 +35,6 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-
-  if (!email || !password) {
-    throw new BadRequestError('Veuillez remplir tous les champs');
-  }
 
   const {
     rows: [user]
