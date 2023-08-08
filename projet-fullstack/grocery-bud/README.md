@@ -76,7 +76,7 @@ role user_role NOT NULL DEFAULT 'user'
 - Faire les routes et les contrôleurs pour items :
 
   - createItem
-  - getAllItems
+  - getAllUserItems
   - getItem
   - updateItem
   - deleteItem
@@ -85,7 +85,7 @@ role user_role NOT NULL DEFAULT 'user'
 
 ## Front-end
 
-- Initialiser un projet React ou copier/coler 05-grocery-bud
-- Créer des "pages" `DashboardLayout.jsx`,`Login.jsx`, `Register.jsx` et `ErrorPage.jsx`
+- Initialiser un projet React ou copier/coller 05-grocery-bud
+- Créer des "pages" `Landing.jsx`, `DashboardLayout.jsx`, `Login.jsx`, `Register.jsx` et `ErrorPage.jsx`
 - Créer un composant `Navbar.jsx`
-- Setup react-router
+- Setup react-router dans `App.jsx`

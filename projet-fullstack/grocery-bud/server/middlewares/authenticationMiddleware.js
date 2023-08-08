@@ -19,4 +19,14 @@ const authenticateUser = (req, _res, next) => {
   }
 };
 
-module.exports = { authenticateUser };
+const authorizePermissions = (...roles) => {
+  return (req, _res, next) => {
+    if (roles.includes(req.user.role)) {
+      throw new UnauthenticatedError('Accès non autorisé');
+    }
+
+    next();
+  };
+};
+
+module.exports = { authenticateUser, authorizePermissions };

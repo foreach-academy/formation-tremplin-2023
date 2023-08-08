@@ -1,5 +1,9 @@
-const { body, validationResult } = require('express-validator');
-const { BadRequestError } = require('../errors/index.js');
+const { body, param, validationResult } = require('express-validator');
+const {
+  BadRequestError,
+  NotFoundError,
+  UnauthorizedError
+} = require('../errors/index.js');
 const db = require('../db');
 
 const withValidationErrors = (validateValues) => {
@@ -10,6 +14,15 @@ const withValidationErrors = (validateValues) => {
 
       if (!errors.isEmpty()) {
         const errorMessages = errors.array().map((error) => error.msg);
+
+        if (errorMessages[0].startsWith("Pas d'article")) {
+          throw new NotFoundError(errorMessages);
+        }
+
+        if (errorMessages[0].startsWith('Accès non')) {
+          throw new UnauthorizedError(errorMessages);
+        }
+
         throw new BadRequestError(errorMessages);
       }
 
@@ -69,4 +82,44 @@ const validateLoginInput = withValidationErrors([
     .escape()
 ]);
 
-module.exports = { validateTest, validateLoginInput, validateRegisterInput };
+const validateAddItemInput = withValidationErrors(
+  body('name').trim().notEmpty().withMessage('Le nom est requis').escape()
+);
+
+// validateUpdateItemInput
+const validateUpdateItemInput = withValidationErrors(
+  body('completed').trim().isBoolean().withMessage('Type invalide').escape()
+);
+
+// validateIdParam
+const validateIdParam = withValidationErrors(
+  param('id').custom(async (id, { req }) => {
+    if (isNaN(Number(id))) {
+      throw new Error('Id non valide');
+    }
+
+    const {
+      rows: [item]
+    } = await db.query('SELECT * FROM items WHERE item_id = $1', [id]);
+
+    if (!item) {
+      throw new Error(`Pas d'article avec l'id ${id}`);
+    }
+
+    const isOwner = req.user.userId === item.user_id;
+    const isAdmin = req.user.role === 'admin';
+
+    if (!isOwner && !isAdmin) {
+      throw new Error('Accès non autorisé');
+    }
+  })
+);
+
+module.exports = {
+  validateTest,
+  validateLoginInput,
+  validateRegisterInput,
+  validateAddItemInput,
+  validateUpdateItemInput,
+  validateIdParam
+};
