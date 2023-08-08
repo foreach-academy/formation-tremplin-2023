@@ -85,7 +85,9 @@ role user_role NOT NULL DEFAULT 'user'
 
 ## Front-end
 
-- Initialiser un projet React ou copier/coller 05-grocery-bud
-- Créer des "pages" `Landing.jsx`, `DashboardLayout.jsx`, `Login.jsx`, `Register.jsx` et `ErrorPage.jsx`
+- Initialiser un projet React "client"
+- Reset
+- Créer un dossier "pages" avec `Landing.jsx`, `Register.jsx`, `Login.jsx`, `ErrorPage.jsx` et `Dashboard.jsx`
+- Créer un dossier "layouts" avec `DashboardLayout.jsx`,
 - Créer un composant `Navbar.jsx`
-- Setup react-router dans `App.jsx`
+- Setup React Router dans `App.jsx`

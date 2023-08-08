@@ -14,6 +14,10 @@ const itemsRouter = require('./routes/itemsRoutes.js');
 
 app.use(express.json());
 
+app.get('/api/v1/test', (_req, res) => {
+  res.status(200).json({ message: `Hello world` });
+});
+
 // test express validator
 app.post('/api/v1/test', validateTest, (req, res) => {
   const { name } = req.body;
