@@ -1,12 +1,14 @@
 import { Link, Form, redirect } from 'react-router-dom';
 import FormRow from '../components/FormRow.jsx';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const action = async ({ request }) => {
   const formData = await request.formData();
-  const datas = Object.fromEntries(formData);
+  const data = Object.fromEntries(formData);
 
+  // fetch avec méthode POST
   // const resp = await fetch('/api/v1/auth/login', {
   //   method: 'POST',
   //   headers: {
@@ -17,11 +19,12 @@ export const action = async ({ request }) => {
   // console.log(await resp.json());
 
   try {
-    const { data } = await axios.post('/api/v1/auth/login', datas);
-    localStorage.setItem('token', data.token);
+    const resp = await axios.post('/api/v1/auth/login', data);
+    localStorage.setItem('token', resp.data.token);
+    toast.success('Connexion réussie');
     return redirect('/dashboard');
   } catch (error) {
-    console.log(error?.response?.data?.msg);
+    toast.error(error?.response?.data?.msg);
     return error;
   }
 };

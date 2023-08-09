@@ -4,8 +4,13 @@ import DashboardLayout from './layouts/DashboardLayout.jsx';
 // pages
 import { Dashboard, ErrorPage, Landing, Login, Register } from './pages';
 
+// loaders
+import { loader as dashboardLayoutLoader } from './layouts/DashboardLayout.jsx';
+
 // actions
+import { action as registerAction } from './pages/Register.jsx';
 import { action as loginAction } from './pages/Login.jsx';
+import { action as deleteItemAction } from './pages/DeleteItem.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +20,8 @@ const router = createBrowserRouter([
   },
   {
     path: '/register',
-    element: <Register />
+    element: <Register />,
+    action: registerAction
   },
   {
     path: '/login',
@@ -25,12 +31,17 @@ const router = createBrowserRouter([
   {
     path: '/dashboard',
     element: <DashboardLayout />,
+    loader: dashboardLayoutLoader,
     children: [
       {
         index: true,
         element: <Dashboard />
       }
     ]
+  },
+  {
+    path: '/items/delete/:id',
+    deleteItemAction
   }
 ]);
 

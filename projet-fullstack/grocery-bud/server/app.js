@@ -11,6 +11,7 @@ const errorHandler = require('./middlewares/errorHandlerMiddleware.js');
 // routers
 const authRouter = require('./routes/authRoutes.js');
 const itemsRouter = require('./routes/itemsRoutes.js');
+const userRouter = require('./routes/userRoutes.js');
 
 app.use(express.json());
 
@@ -26,6 +27,7 @@ app.post('/api/v1/test', validateTest, (req, res) => {
 
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/items', itemsRouter);
+app.use('/api/v1/users', userRouter);
 
 app.use(notFound);
 app.use(errorHandler);
