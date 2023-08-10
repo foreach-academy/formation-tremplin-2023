@@ -2,8 +2,8 @@ import { Link, useRouteError } from 'react-router-dom';
 import img from '../assets/images/not-found.svg';
 
 const ErrorPage = () => {
-  // const error = useRouteError();
-  // console.log(error.status);
+  const error = useRouteError();
+  console.log(error);
 
   return (
     <main className='error-page full-page'>

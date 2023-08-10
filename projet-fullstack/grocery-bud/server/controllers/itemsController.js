@@ -24,7 +24,7 @@ const createItem = async (req, res) => {
 
 const getAllUserItems = async (req, res) => {
   const { rows: items } = await db.query(
-    'SELECT * FROM items WHERE user_id = $1',
+    'SELECT * FROM items WHERE user_id = $1 ORDER BY item_id',
     [req.user.userId]
   );
   res.status(StatusCodes.OK).json({ count: items.length, items });

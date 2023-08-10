@@ -30,8 +30,6 @@ const DashboardLayout = () => {
   const { user, data } = useLoaderData();
   const items = data.items;
 
-  console.log(items);
-
   return (
     <>
       <Navbar user={user} />

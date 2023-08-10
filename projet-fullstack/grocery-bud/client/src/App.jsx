@@ -10,7 +10,9 @@ import { loader as dashboardLayoutLoader } from './layouts/DashboardLayout.jsx';
 // actions
 import { action as registerAction } from './pages/Register.jsx';
 import { action as loginAction } from './pages/Login.jsx';
+import { action as addItemAction } from './components/ItemsForm.jsx';
 import { action as deleteItemAction } from './pages/DeleteItem.jsx';
+import { action as editItemAction } from './pages/EditItem.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,13 +37,18 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Dashboard />
+        element: <Dashboard />,
+        action: addItemAction
       }
     ]
   },
   {
     path: '/items/delete/:id',
-    deleteItemAction
+    action: deleteItemAction
+  },
+  {
+    path: '/items/edit/:id',
+    action: editItemAction
   }
 ]);
 

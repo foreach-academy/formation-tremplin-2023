@@ -5,8 +5,6 @@ import Items from '../components/Items.jsx';
 const Dashboard = () => {
   const { items } = useOutletContext();
 
-  console.log(items);
-
   return (
     <section className='section-center'>
       <ItemsForm />
