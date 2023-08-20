@@ -33,13 +33,8 @@ const Login = () => {
   return (
     <Form method='POST' className='form'>
       <h4>Connexion</h4>
-      <FormRow type='email' name='email' defaultValue='john@gmail.com' />
-      <FormRow
-        type='password'
-        name='password'
-        labelText='mot de passe'
-        defaultValue='secret123'
-      />
+      <FormRow type='email' name='email' />
+      <FormRow type='password' name='password' labelText='mot de passe' />
       <button type='submit' className='btn btn-block'>
         Se connecter
       </button>

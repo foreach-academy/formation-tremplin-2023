@@ -23,14 +23,9 @@ const Register = () => {
   return (
     <Form method='POST' className='form'>
       <h4>Inscription</h4>
-      <FormRow type='text' name='name' labelText='nom' defaultValue='john' />
-      <FormRow type='email' name='email' defaultValue='john@gmail.com' />
-      <FormRow
-        type='password'
-        name='password'
-        labelText='mot de passe'
-        defaultValue='secret123'
-      />
+      <FormRow type='text' name='name' labelText='nom' />
+      <FormRow type='email' name='email' />
+      <FormRow type='password' name='password' labelText='mot de passe' />
       <button className='btn btn-block'>S&apos;inscrire</button>
       <p style={{ textAlign: 'center', marginTop: '1em' }}>
         Vous êtes déjà membre ? <Link to='/login'>Se connecter</Link>

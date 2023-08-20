@@ -2,6 +2,7 @@ require('express-async-errors');
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const helmet = require('helmet');
 const { validateTest } = require('./middlewares/validationMiddleware.js');
 
 // middlewares
@@ -13,6 +14,7 @@ const authRouter = require('./routes/authRoutes.js');
 const itemsRouter = require('./routes/itemsRoutes.js');
 const userRouter = require('./routes/userRoutes.js');
 
+app.use(helmet());
 app.use(express.json());
 
 app.get('/api/v1/test', (_req, res) => {
